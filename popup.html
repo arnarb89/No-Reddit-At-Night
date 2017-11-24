@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head><title>No Reddit At Night</title>
+		<style>
+			body{
+				width:170px;
+				text-align:center;
+			}
+			input{
+				width:33px;
+				display:inline-block;
+			}
+			.label{
+				display:inline-block;
+				width:45px;
+			}
+			#status{
+				height: 1em;
+			}
+			h2 {
+				color:black;text-shadow:rgba(255,255,255,.1) -1px -1px 1px,
+				rgba(0,0,0,.5) 1px 1px 1px;
+				margin-bottom:10px;
+			}	
+
+
+		</style>
+
+	</head>
+	<body>
+		<h2>No Reddit At Night</h2>
+		<img src="images/icons/icon48.png" style="width:48px;height:48px;">
+		<br>
+
+
+		From: <br><br>
+		<div class="label">Hour</div><input id="fromHour" class="inputHours" type="number" min="0" max="23" step="1" value ="00" />:
+		<input id="fromMin" class="inputMins" type="number" min="0" max="60" step="1" value ="00" /><div class="label">Minute</div>
+		<br>
+		<br>
+		To: <br><br>
+		<div class="label">Hour</div><input id="toHour" class="inputHours" type="number" min="0" max="23" step="1" value ="23" />:
+		<input id="toMin" class="inputMins" type="number" min="0" max="60" step="1" value ="60" /><div class="label">Minute</div>
+		<br>
+			<br>
+			<label>
+			  Monday<input type="checkbox" id="monday">
+			  
+			</label>
+			<br>
+			<label>
+			  Tuesday<input type="checkbox" id="tuesday">
+			  
+			</label>
+			<br>
+			<label>
+			  Wednesday<input type="checkbox" id="wednesday">
+			  
+			</label>
+			<br>
+			<label>
+			  Thursday<input type="checkbox" id="thursday">
+			  
+			</label>
+			<br>
+			<label>
+			  Friday<input type="checkbox" id="friday">
+			  
+			</label>
+			<br>
+			<label>
+			  Saturday<input type="checkbox" id="saturday">
+			  
+			</label>
+			<br>
+			<label>
+			  Sunday<input type="checkbox" id="sunday">
+			  
+			</label>
+			<br>
+		<br>
+		<button id ="submit" type="submit" value="Submit">Submit</button>
+		<br>
+		<div id="status">
+			
+		</div>
+		<script src="util.js"></script>
+		<script src="popup.js"></script>
+	</body>
+</html>

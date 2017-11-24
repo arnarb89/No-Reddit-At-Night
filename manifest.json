@@ -1,0 +1,33 @@
+{
+	"name": "No Reddit At Night",
+	"description": "This extension allows you to disable Reddit at night. Empower your life and disable the distractions!",
+	"options_page": "options.html",
+	"version": "1.0.0.1",
+	"manifest_version": 2,
+	"content_scripts": [{
+		"matches": ["*://*.reddit.com/*"],
+		"js": ["util.js", "myscript.js"],
+		"run_at": "document_start"
+	}],
+	"permissions": [
+		"storage"
+	],
+
+	"icons": {
+		"16": "/images/icons/icon16.png",
+		"48": "/images/icons/icon48.png",
+		"128": "/images/icons/icon128.png"
+	},
+
+	"browser_action": {
+		"default_icon": {
+			"16": "images/icon16.png",
+			"48": "images/icon48.png"
+		},
+		"default_title": "No Reddit At Night",
+		"default_popup": "popup.html"
+	},
+	"background": {
+		"page": "bg.html"
+	}
+}
